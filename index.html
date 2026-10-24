@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fathima Fida | Data Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Fathima Fida, a passionate Data Analyst and BCA Graduate from Calicut University. Explore projects in Placement Analytics, Sales Analysis, and EDA.">
+  <meta name="keywords" content="Fathima Fida, Data Analyst, BCA, Calicut University, Python, SQL, Power BI, Excel, Pandas, NumPy, Matplotlib, Data Analytics Portfolio">
+  <meta name="author" content="Fathima Fida">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Fathima Fida | Data Analyst Portfolio">
+  <meta property="og:description" content="Turning complex datasets into meaningful business insights. BCA graduate skilled in Python, SQL, Power BI, and Excel.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN with Custom Theme Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            dark: {
+              950: '#0A0908',
+              900: '#110F0D',
+              850: '#171412',
+              800: '#1E1A17',
+              750: '#26201B',
+              700: '#342B23',
+            },
+            mocha: {
+              DEFAULT: '#4A3525',
+              light: '#6F4E37',
+              dark: '#2E1F16',
+            },
+            bronze: {
+              DEFAULT: '#A67C52',
+              light: '#C49A6C',
+              dark: '#7D5734',
+            },
+            beige: {
+              50: '#FAF7F2',
+              100: '#F5EBE0',
+              200: '#E6CCB2',
+              300: '#DDBEA9',
+              400: '#CB997E',
+              500: '#B08968',
+            },
+            amberAccent: '#E0A96D',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Chart.js for Live Data Analytics Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-950 text-beige-100 antialiased min-h-screen relative selection:bg-bronze-light selection:text-dark-950">
+
+  <!-- Ambient Glow Background Blobs -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div class="glow-warm glow-bronze w-[500px] h-[500px] -top-40 -left-20"></div>
+    <div class="glow-warm glow-mocha w-[600px] h-[600px] top-[30%] -right-40"></div>
+    <div class="glow-warm glow-amber w-[450px] h-[450px] bottom-10 left-[20%]"></div>
+    <div class="absolute inset-0 bg-ambient-grid opacity-60"></div>
+  </div>
+
+  <!-- Main Wrapper -->
+  <div class="relative z-10 flex flex-col min-h-screen">
+
+    <!-- ==========================================================================
+         NAVIGATION BAR
+         ========================================================================== -->
+    <header class="sticky top-0 z-50 glass-nav transition-all duration-300" id="main-header">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <!-- Logo & Brand -->
+          <a href="#home" class="group flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-bronze-light to-mocha-dark flex items-center justify-center font-display font-bold text-dark-950 text-xl shadow-lg shadow-bronze/20 border border-beige-300/30 group-hover:scale-105 transition-transform">
+              F
+            </div>
+            <div class="flex flex-col">
+              <span class="font-display font-bold text-lg text-beige-100 tracking-tight flex items-center gap-1.5 group-hover:text-bronze-light transition-colors">
+                Fathima Fida
+                <span class="w-2 h-2 rounded-full bg-bronze-light inline-block"></span>
+              </span>
+              <span class="text-xs text-beige-400 font-mono tracking-wider uppercase">Data Analyst</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+            <a href="#home" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-beige-200 hover:text-beige-50 hover:bg-dark-800/60 transition-all">Home</a>
+            <a href="#about" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-beige-200 hover:text-beige-50 hover:bg-dark-800/60 transition-all">About</a>
+            <a href="#skills" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-beige-200 hover:text-beige-50 hover:bg-dark-800/60 transition-all">Skills</a>
+            <a href="#projects" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-beige-200 hover:text-beige-50 hover:bg-dark-800/60 transition-all">Projects</a>
+            <a href="#education" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-beige-200 hover:text-beige-50 hover:bg-dark-800/60 transition-all">Education</a>
+            <a href="#contact" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-beige-200 hover:text-beige-50 hover:bg-dark-800/60 transition-all">Contact</a>
+          </nav>
+
+          <!-- Header Action Buttons -->
+          <div class="hidden sm:flex items-center gap-3">
+            <a href="https://github.com/fida-saleem" target="_blank" rel="noopener noreferrer" 
+               class="p-2.5 rounded-xl bg-dark-850/80 border border-bronze/20 text-beige-200 hover:text-bronze-light hover:border-bronze-light/50 transition-all" 
+               title="GitHub Profile" aria-label="GitHub Profile">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+            <a href="https://linkedin.com/in/fathima-fida-13185b433" target="_blank" rel="noopener noreferrer" 
+               class="p-2.5 rounded-xl bg-dark-850/80 border border-bronze/20 text-beige-200 hover:text-bronze-light hover:border-bronze-light/50 transition-all" 
+               title="LinkedIn Profile" aria-label="LinkedIn Profile">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="#contact" class="btn-primary px-4 py-2 rounded-xl text-sm flex items-center gap-2">
+              <span>Let's Connect</span>
+              <i data-lucide="send" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- Mobile Hamburger Button -->
+          <div class="flex items-center sm:hidden">
+            <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg bg-dark-850 border border-bronze/20 text-beige-100 hover:text-bronze-light focus:outline-none" aria-label="Toggle Menu">
+              <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+              <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Navigation -->
+      <div id="mobile-menu" class="hidden sm:hidden bg-dark-900/95 border-b border-bronze/20 px-4 pt-2 pb-6 space-y-2 backdrop-blur-xl">
+        <a href="#home" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-beige-200 hover:bg-dark-800 hover:text-bronze-light">Home</a>
+        <a href="#about" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-beige-200 hover:bg-dark-800 hover:text-bronze-light">About Me</a>
+        <a href="#skills" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-beige-200 hover:bg-dark-800 hover:text-bronze-light">Skills</a>
+        <a href="#projects" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-beige-200 hover:bg-dark-800 hover:text-bronze-light">Projects</a>
+        <a href="#education" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-beige-200 hover:bg-dark-800 hover:text-bronze-light">Education</a>
+        <a href="#contact" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-beige-200 hover:bg-dark-800 hover:text-bronze-light">Contact</a>
+        <div class="pt-4 flex items-center gap-3 border-t border-dark-750">
+          <a href="https://github.com/fida-saleem" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 rounded-lg bg-dark-850 border border-bronze/20 text-center text-sm font-medium text-beige-200 hover:text-bronze-light flex items-center justify-center gap-2">
+            <i data-lucide="github" class="w-4 h-4"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/fathima-fida-13185b433" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 rounded-lg bg-dark-850 border border-bronze/20 text-center text-sm font-medium text-beige-200 hover:text-bronze-light flex items-center justify-center gap-2">
+            <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+         HERO SECTION (HOME)
+         ========================================================================== -->
+    <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Hero Text Content -->
+          <div class="lg:col-span-7 space-y-6 text-left">
+            
+            <!-- Availability Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dark-850/90 border border-bronze/30 shadow-inner">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 status-dot-pulse"></span>
+              <span class="text-xs font-medium text-beige-200">Open for Entry-Level Data Analyst Roles & Opportunities</span>
+            </div>
+
+            <!-- Greeting & Main Headings -->
+            <div class="space-y-2">
+              <p class="text-lg md:text-xl font-medium text-beige-300 flex items-center gap-2">
+                <span>Hi, I'm</span> 
+                <span class="font-display font-semibold text-beige-100">Fathima Fida</span>
+              </p>
+              <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold tracking-tight text-white leading-[1.1]">
+                <span class="text-gradient-beige">Data Analyst</span>
+              </h1>
+            </div>
+
+            <!-- Introduction Paragraph -->
+            <p class="text-base sm:text-lg text-beige-300 max-w-2xl leading-relaxed">
+              Passionate <strong class="text-beige-100 font-semibold">BCA Graduate</strong> specialized in translating complex raw datasets into clear, actionable business insights. Skilled in <span class="text-bronze-light font-medium">Python, SQL, Power BI, and Excel</span> with a dedicated focus on exploratory data analysis, pattern discovery, and dashboard storytelling.
+            </p>
+
+            <!-- Key Quick Value Tags -->
+            <div class="flex flex-wrap gap-2.5 pt-1">
+              <span class="data-pill">
+                <i data-lucide="database" class="w-3.5 h-3.5 text-bronze-light"></i>
+                SQL & Relational DBs
+              </span>
+              <span class="data-pill">
+                <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 text-bronze-light"></i>
+                Power BI & Dashboards
+              </span>
+              <span class="data-pill">
+                <i data-lucide="code" class="w-3.5 h-3.5 text-bronze-light"></i>
+                Python (Pandas • NumPy)
+              </span>
+              <span class="data-pill">
+                <i data-lucide="search" class="w-3.5 h-3.5 text-bronze-light"></i>
+                Exploratory Data Analysis
+              </span>
+            </div>
+
+            <!-- CTA Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-4">
+              <a href="#projects" class="btn-primary px-6 py-3.5 rounded-xl text-base font-semibold flex items-center gap-2.5 group">
+                <span>View Projects</span>
+                <i data-lucide="arrow-down-right" class="w-5 h-5 group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform"></i>
+              </a>
+              <a href="#contact" class="btn-secondary px-6 py-3.5 rounded-xl text-base font-medium flex items-center gap-2.5">
+                <span>Contact Me</span>
+                <i data-lucide="mail" class="w-5 h-5 text-beige-300"></i>
+              </a>
+              <button id="quick-resume-btn" type="button" class="px-5 py-3.5 rounded-xl text-sm font-medium text-beige-300 hover:text-beige-50 hover:bg-dark-800/80 border border-bronze/20 transition-all flex items-center gap-2">
+                <i data-lucide="file-text" class="w-4 h-4 text-bronze-light"></i>
+                <span>Resume Summary</span>
+              </button>
+            </div>
+
+            <!-- Social Links Strip -->
+            <div class="flex items-center gap-4 pt-3 text-sm text-beige-400">
+              <span class="text-xs uppercase tracking-wider text-beige-400 font-mono">Connect:</span>
+              <a href="https://linkedin.com/in/fathima-fida-13185b433" target="_blank" rel="noopener noreferrer" class="hover:text-bronze-light flex items-center gap-1.5 transition-colors">
+                <i data-lucide="linkedin" class="w-4 h-4 text-bronze"></i>
+                <span class="hover:underline">LinkedIn</span>
+              </a>
+              <span class="text-dark-700">•</span>
+              <a href="https://github.com/fida-saleem" target="_blank" rel="noopener noreferrer" class="hover:text-bronze-light flex items-center gap-1.5 transition-colors">
+                <i data-lucide="github" class="w-4 h-4 text-bronze"></i>
+                <span class="hover:underline">GitHub</span>
+              </a>
+              <span class="text-dark-700">•</span>
+              <span class="flex items-center gap-1 text-beige-300">
+                <i data-lucide="map-pin" class="w-4 h-4 text-bronze"></i>
+                Calicut, India
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Hero Visual & Live Interactive Analytics Widget -->
+          <div class="lg:col-span-5">
+            <div class="glass-card rounded-2xl p-5 sm:p-6 border-shimmer relative">
+              
+              <!-- Widget Top Header -->
+              <div class="flex items-center justify-between border-b border-bronze/15 pb-4 mb-4">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-lg bg-mocha-dark/80 border border-bronze/30 flex items-center justify-center text-bronze-light">
+                    <i data-lucide="activity" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-beige-100 font-display">Analytics Sandbox</h3>
+                    <p class="text-[11px] text-beige-400 font-mono">Interactive Portfolio Metrics</p>
+                  </div>
+                </div>
+
+                <!-- Interactive Chart Switcher Tabs -->
+                <div class="flex bg-dark-900 rounded-lg p-1 border border-bronze/20">
+                  <button id="chart-tab-placement" class="chart-tab-btn active px-2.5 py-1 text-xs font-medium rounded-md bg-bronze text-dark-950 transition-all">Placement</button>
+                  <button id="chart-tab-sales" class="chart-tab-btn px-2.5 py-1 text-xs font-medium rounded-md text-beige-300 hover:text-beige-100 transition-all">Sales</button>
+                  <button id="chart-tab-skills" class="chart-tab-btn px-2.5 py-1 text-xs font-medium rounded-md text-beige-300 hover:text-beige-100 transition-all">Skills</button>
+                </div>
+              </div>
+
+              <!-- Live Chart Canvas Area -->
+              <div class="chart-container-box">
+                <canvas id="heroAnalyticsChart"></canvas>
+              </div>
+
+              <!-- Quick Metrics Grid Below Chart -->
+              <div class="grid grid-cols-3 gap-3 pt-4 border-t border-bronze/15 mt-3 text-center">
+                <div class="p-2.5 rounded-xl bg-dark-900/60 border border-bronze/10">
+                  <div class="text-xs text-beige-400 font-mono">Core Tool</div>
+                  <div class="text-sm font-bold text-bronze-light mt-0.5">Python & SQL</div>
+                </div>
+                <div class="p-2.5 rounded-xl bg-dark-900/60 border border-bronze/10">
+                  <div class="text-xs text-beige-400 font-mono">Education</div>
+                  <div class="text-sm font-bold text-beige-100 mt-0.5">BCA Calicut</div>
+                </div>
+                <div class="p-2.5 rounded-xl bg-dark-900/60 border border-bronze/10">
+                  <div class="text-xs text-beige-400 font-mono">Focus</div>
+                  <div class="text-sm font-bold text-amberAccent mt-0.5">EDA & BI</div>
+                </div>
+              </div>
+
+              <!-- Subtitle badge -->
+              <div class="mt-3 text-center">
+                <span class="text-[11px] text-beige-400 flex items-center justify-center gap-1.5">
+                  <i data-lucide="sparkles" class="w-3 h-3 text-bronze-light"></i>
+                  Interactive live preview of dataset evaluations
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         ABOUT ME SECTION
+         ========================================================================== -->
+    <section id="about" class="py-20 bg-dark-900/60 border-y border-bronze/10 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dark-850 border border-bronze/25 text-xs font-mono text-bronze-light uppercase tracking-wider">
+            <i data-lucide="user" class="w-3.5 h-3.5"></i>
+            Professional Profile
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
+            About <span class="text-gradient-beige">Me</span>
+          </h2>
+          <p class="text-base text-beige-300">
+            A BCA graduate with a deep analytical mindset, turning structured data into strategic solutions.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+          
+          <!-- Narrative Column -->
+          <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-5">
+              <h3 class="text-xl font-display font-semibold text-beige-100 flex items-center gap-2.5">
+                <i data-lucide="compass" class="w-5 h-5 text-bronze-light"></i>
+                From Computer Applications to Data Analytics
+              </h3>
+              
+              <p class="text-beige-300 leading-relaxed text-sm sm:text-base">
+                Hello! I am <strong class="text-beige-100">Fathima Fida</strong>, a Bachelor of Computer Applications (BCA) graduate from <strong class="text-beige-100">Calicut University</strong>. During my degree, my coursework in database management, statistics, and programming ignited my passion for understanding what lies beneath raw rows of data.
+              </p>
+
+              <p class="text-beige-300 leading-relaxed text-sm sm:text-base">
+                I am captivated by the entire data journey: from extracting and cleaning noisy real-world data with <strong class="text-bronze-light">Python (Pandas & NumPy)</strong> and <strong class="text-bronze-light">SQL</strong>, to engineering calculated metrics and bringing stories alive through <strong class="text-bronze-light">Power BI</strong> and <strong class="text-bronze-light">Excel</strong> dashboards.
+              </p>
+
+              <p class="text-beige-300 leading-relaxed text-sm sm:text-base">
+                Rather than relying on assumptions, I believe in empirical truth—finding correlation patterns, spotting outliers, and translating complex mathematical patterns into intuitive visual insights that help teams make informed decisions.
+              </p>
+
+              <!-- Education snapshot badge -->
+              <div class="pt-3 border-t border-bronze/15 flex flex-wrap items-center justify-between gap-3 text-xs text-beige-300 font-mono">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="graduation-cap" class="w-4 h-4 text-bronze-light"></i>
+                  <span>Degree: BCA (Calicut University)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                  <span>Ready for Full-Time Roles & Internships</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 Key Highlights / Metrics Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="glass-card rounded-xl p-5 border-bronze/20 flex items-start gap-3.5">
+                <div class="p-2.5 rounded-lg bg-mocha-dark/90 text-bronze-light border border-bronze/30">
+                  <i data-lucide="cpu" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-display font-semibold text-beige-100 text-sm">Computer Science Core</h4>
+                  <p class="text-xs text-beige-400 mt-1">Deep grounding in database structures, queries, logic, and computing paradigms.</p>
+                </div>
+              </div>
+
+              <div class="glass-card rounded-xl p-5 border-bronze/20 flex items-start gap-3.5">
+                <div class="p-2.5 rounded-lg bg-mocha-dark/90 text-bronze-light border border-bronze/30">
+                  <i data-lucide="pie-chart" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-display font-semibold text-beige-100 text-sm">Business Acumen</h4>
+                  <p class="text-xs text-beige-400 mt-1">Focus on actionable metrics, ROI, trend forecasting, and executive reporting.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 4 Analytical Pillars Column -->
+          <div class="lg:col-span-5 space-y-4">
+            
+            <div class="glass-card rounded-xl p-5 border-bronze/20 hover:border-bronze-light/40">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-7 h-7 rounded-lg bg-dark-850 flex items-center justify-center font-mono font-bold text-xs text-bronze-light border border-bronze/30">01</span>
+                <h4 class="font-display font-semibold text-beige-100 text-base">Exploratory Data Analysis (EDA)</h4>
+              </div>
+              <p class="text-xs text-beige-300 leading-relaxed pl-10">
+                Systematic inspection of distributions, outlier removal with IQR & Z-scores, missing value imputation, and correlation mapping using Matplotlib & Seaborn.
+              </p>
+            </div>
+
+            <div class="glass-card rounded-xl p-5 border-bronze/20 hover:border-bronze-light/40">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-7 h-7 rounded-lg bg-dark-850 flex items-center justify-center font-mono font-bold text-xs text-bronze-light border border-bronze/30">02</span>
+                <h4 class="font-display font-semibold text-beige-100 text-base">Database Querying & Modeling</h4>
+              </div>
+              <p class="text-xs text-beige-300 leading-relaxed pl-10">
+                Crafting robust SQL queries involving inner/outer joins, CTEs, window functions, aggregations, and subqueries to pull accurate truth sets.
+              </p>
+            </div>
+
+            <div class="glass-card rounded-xl p-5 border-bronze/20 hover:border-bronze-light/40">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-7 h-7 rounded-lg bg-dark-850 flex items-center justify-center font-mono font-bold text-xs text-bronze-light border border-bronze/30">03</span>
+                <h4 class="font-display font-semibold text-beige-100 text-base">Interactive Dashboarding</h4>
+              </div>
+              <p class="text-xs text-beige-300 leading-relaxed pl-10">
+                Designing user-friendly Power BI reports with DAX measures, dynamic slicers, drill-down charts, and Advanced Excel Pivot reporting.
+              </p>
+            </div>
+
+            <div class="glass-card rounded-xl p-5 border-bronze/20 hover:border-bronze-light/40">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-7 h-7 rounded-lg bg-dark-850 flex items-center justify-center font-mono font-bold text-xs text-bronze-light border border-bronze/30">04</span>
+                <h4 class="font-display font-semibold text-beige-100 text-base">Data Wrangling with Python</h4>
+              </div>
+              <p class="text-xs text-beige-300 leading-relaxed pl-10">
+                Leveraging Pandas DataFrames and NumPy array operations for fast feature engineering, data normalization, and reproducible analytical pipelines.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SKILLS SECTION
+         ========================================================================== -->
+    <section id="skills" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dark-850 border border-bronze/25 text-xs font-mono text-bronze-light uppercase tracking-wider">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+            Technical Toolkit
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
+            Core <span class="text-gradient-beige">Skills & Competencies</span>
+          </h2>
+          <p class="text-base text-beige-300">
+            A comprehensive set of modern data analytics tools, libraries, and analytical methodologies.
+          </p>
+
+          <!-- Category Filter Buttons -->
+          <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
+            <button class="skill-filter-btn active px-4 py-1.5 rounded-full text-xs font-medium bg-bronze text-dark-950 transition-all" data-category="all">All Skills (8)</button>
+            <button class="skill-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-dark-850 text-beige-300 hover:text-beige-100 border border-bronze/20 transition-all" data-category="languages">Languages & SQL</button>
+            <button class="skill-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-dark-850 text-beige-300 hover:text-beige-100 border border-bronze/20 transition-all" data-category="libraries">Python Data Stack</button>
+            <button class="skill-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-dark-850 text-beige-300 hover:text-beige-100 border border-bronze/20 transition-all" data-category="bi">BI & Spreadsheets</button>
+          </div>
+        </div>
+
+        <!-- Skills Grid: 8 Core Required Skills -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="skills-grid">
+          
+          <!-- 1. Python -->
+          <div class="skill-card glass-card rounded-2xl p-6 border-shimmer flex flex-col justify-between" data-category="languages">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-mocha-dark/80 border border-bronze/30 flex items-center justify-center text-bronze-light">
+                  <i data-lucide="terminal" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono uppercase px-2.5 py-1 rounded-md bg-dark-900 text-bronze-light border border-bronze/20">Core Language</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-beige-100">Python</h3>
+              <p class="text-xs text-beige-300 mt-2 leading-relaxed">
+                Primary scripting language for data pipelines, statistical computation, data transformations, and algorithm automation.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-bronze/15">
+              <span class="text-[11px] font-mono text-beige-400">Applications: Scripts, Automation, Clean Data</span>
+            </div>
+          </div>
+
+          <!-- 2. SQL -->
+          <div class="skill-card glass-card rounded-2xl p-6 border-shimmer flex flex-col justify-between" data-category="languages">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-mocha-dark/80 border border-bronze/30 flex items-center justify-center text-bronze-light">
+                  <i data-lucide="database" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono uppercase px-2.5 py-1 rounded-md bg-dark-900 text-amberAccent border border-bronze/20">Query Language</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-beige-100">SQL</h3>
+              <p class="text-xs text-beige-300 mt-2 leading-relaxed">
+                Database querying mastery: Joins, Aggregations, Group By, Subqueries, CTEs, and relational database schema design.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-bronze/15">
+              <span class="text-[11px] font-mono text-beige-400">Applications: Data Extraction, Filtering, Aggregations</span>
+            </div>
+          </div>
+
+          <!-- 3. Excel -->
+          <div class="skill-card glass-card rounded-2xl p-6 border-shimmer flex flex-col justify-between" data-category="bi">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-mocha-dark/80 border border-bronze/30 flex items-center justify-center text-bronze-light">
+                  <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono uppercase px-2.5 py-1 rounded-md bg-dark-900 text-emerald-400 border border-bronze/20">Analytics Tool</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-beige-100">Excel</h3>
+              <p class="text-xs text-beige-300 mt-2 leading-relaxed">
+                Advanced spreadsheets: Pivot Tables, VLOOKUP/XLOOKUP, Conditional Formatting, Data Validation, and dynamic summary KPI reports.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-bronze/15">
+              <span class="text-[11px] font-mono text-beige-400">Applications: Quick Modeling, Pivot Summaries, Formulas</span>
+            </div>
+          </div>
+
+          <!-- 4. Power BI -->
+          <div class="skill-card glass-card rounded-2xl p-6 border-shimmer flex flex-col justify-between" data-category="bi">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-mocha-dark/80 border border-bronze/30 flex items-center justify-center text-bronze-light">
+                  <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono uppercase px-2.5 py-1 rounded-md bg-dark-900 text-yellow-400 border border-bronze/20">BI Platform</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-beige-100">Power BI</h3>
+              <p class="text-xs text-beige-300 mt-2 leading-relaxed">
+                Interactive executive dashboard creation, data modeling, DAX measures, relationship mapping, and visual business storytelling.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-bronze/15">
+              <span class="text-[11px] font-mono text-beige-400">Applications: Interactive Dashboards, DAX, Reports</span>
+            </div>
+          </div>
+
+          <!-- 5. Pandas -->
+          <div class="skill-card glass-card rounded-2xl p-6 border-shimmer flex flex-col justify-between" data-category="libraries">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-mocha-dark/80 border border-bronze/30 flex items-center justify-center text-bronze-light">
+                  <i data-lucide="table" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono uppercase px-2.5 py-1 rounded-md bg-dark-900 text-bronze-light border border-bronze/20">Data Wrangling</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-beige-100">Pandas</h3>
+              <p class="text-xs text-beige-300 mt-2 leading-relaxed">
+                DataFrame manipulation, missing value imputation, indexing, grouping, pivoting, merging datasets, and cleaning raw messy tables.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-bronze/15">
+              <span class="text-[11px] font-mono text-beige-400">Applications: Data Cleaning, Merging, Feature Eng.</span>
+            </div>
+          </div>
+
+          <!-- 6. NumPy -->
+          <div class="skill-card glass-card rounded-2xl p-6 border-shimmer flex flex-col justify-between" data-category="libraries">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-mocha-dark/80 border border-bronze/30 flex items-center justify-center text-bronze-light">
+                  <i data-lucide="binary" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono uppercase px-2.5 py-1 rounded-md bg-dark-900 text-bronze-light border border-bronze/20">Numerical Stack</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-beige-100">NumPy</h3>
+              <p class="text-xs text-beige-300 mt-2 leading-relaxed">
+                Multi-dimensional array calculations, mathematical operations, vectorization, statistical measures, and rapid computations.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-bronze/15">
+              <span class="text-[11px] font-mono text-beige-400">Applications: Array Ops, Linear Math, Stats</span>
+            </div>
+          </div>
+
+          <!-- 7. Matplotlib -->
+          <div class="skill-card glass-card rounded-2xl p-6 border-shimmer flex flex-col justify-between" data-category="libraries">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-mocha-dark/80 border border-bronze/30 flex items-center justify-center text-bronze-light">
+                  <i data-lucide="line-chart" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono uppercase px-2.5 py-1 rounded-md bg-dark-900 text-bronze-light border border-bronze/20">Visualization</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-beige-100">Matplotlib</h3>
+              <p class="text-xs text-beige-300 mt-2 leading-relaxed">
+                Crafting visual plots: Histograms, Scatter plots, Bar charts, Boxplots for outlier inspection, and subplots for comparative analysis.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-bronze/15">
+              <span class="text-[11px] font-mono text-beige-400">Applications: Statistical Plots, Distributions, Trends</span>
+            </div>
+          </div>
+
+          <!-- 8. Data Analysis -->
+          <div class="skill-card glass-card rounded-2xl p-6 border-shimmer flex flex-col justify-between" data-category="languages">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-mocha-dark/80 border border-bronze/30 flex items-center justify-center text-bronze-light">
+                  <i data-lucide="trending-up" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono uppercase px-2.5 py-1 rounded-md bg-dark-900 text-amberAccent border border-bronze/20">Methodology</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-beige-100">Data Analysis</h3>
+              <p class="text-xs text-beige-300 mt-2 leading-relaxed">
+                End-to-end analytical thinking: Problem scoping, hypothesis testing, exploratory research, correlation discovery, and executive presentation.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-bronze/15">
+              <span class="text-[11px] font-mono text-beige-400">Applications: Root Cause Analysis, KPI Tracking</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Analytical Workflow Process Strip -->
+        <div class="mt-16 glass-card rounded-2xl p-6 sm:p-8 border-bronze/20">
+          <div class="text-center mb-6">
+            <h3 class="font-display font-semibold text-lg text-beige-100">My Systematic Analytics Pipeline</h3>
+            <p class="text-xs text-beige-400 mt-1">From raw unstructured noise to verified organizational value</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+            <div class="p-4 rounded-xl bg-dark-900/60 border border-bronze/10 text-center">
+              <div class="w-8 h-8 rounded-full bg-bronze/20 text-bronze-light font-mono font-bold text-xs flex items-center justify-center mx-auto mb-2">1</div>
+              <h4 class="font-semibold text-sm text-beige-100">Data Ingestion</h4>
+              <p class="text-[11px] text-beige-400 mt-1">Extracting clean datasets via SQL queries, Excel sheets, and CSV feeds.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-dark-900/60 border border-bronze/10 text-center">
+              <div class="w-8 h-8 rounded-full bg-bronze/20 text-bronze-light font-mono font-bold text-xs flex items-center justify-center mx-auto mb-2">2</div>
+              <h4 class="font-semibold text-sm text-beige-100">Wrangling & Cleansing</h4>
+              <p class="text-[11px] text-beige-400 mt-1">Pandas & NumPy transformations, null handling, type conversion & normalization.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-dark-900/60 border border-bronze/10 text-center">
+              <div class="w-8 h-8 rounded-full bg-bronze/20 text-bronze-light font-mono font-bold text-xs flex items-center justify-center mx-auto mb-2">3</div>
+              <h4 class="font-semibold text-sm text-beige-100">Exploratory Analysis</h4>
+              <p class="text-[11px] text-beige-400 mt-1">Matplotlib statistical distributions, correlation matrices & trend evaluation.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-dark-900/60 border border-bronze/10 text-center">
+              <div class="w-8 h-8 rounded-full bg-bronze/20 text-bronze-light font-mono font-bold text-xs flex items-center justify-center mx-auto mb-2">4</div>
+              <h4 class="font-semibold text-sm text-beige-100">Dashboard Delivery</h4>
+              <p class="text-[11px] text-beige-400 mt-1">Interactive Power BI reports, DAX metrics, and clear stakeholder presentations.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         PROJECTS SECTION
+         ========================================================================== -->
+    <section id="projects" class="py-20 bg-dark-900/40 border-y border-bronze/10 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dark-850 border border-bronze/25 text-xs font-mono text-bronze-light uppercase tracking-wider">
+            <i data-lucide="folder-git-2" class="w-3.5 h-3.5"></i>
+            Featured Case Studies
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
+            Practical <span class="text-gradient-beige">Data Projects</span>
+          </h2>
+          <p class="text-base text-beige-300">
+            Real-world analytical evaluations built with rigorous methodology, clean code, and interactive visual reporting.
+          </p>
+        </div>
+
+        <!-- Projects Cards Grid (3 Required Projects) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- PROJECT 1: Placement Analytics -->
+          <div class="glass-card rounded-2xl overflow-hidden border-shimmer flex flex-col justify-between group">
+            <div>
+              <!-- Visual Mockup Header -->
+              <div class="relative bg-gradient-to-br from-mocha-dark to-dark-950 p-6 border-b border-bronze/15 overflow-hidden">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-[11px] font-mono text-bronze-light bg-dark-950/80 px-2.5 py-1 rounded-md border border-bronze/20">
+                    Academic & HR Analytics
+                  </span>
+                  <div class="w-8 h-8 rounded-lg bg-dark-900/80 flex items-center justify-center text-bronze-light border border-bronze/20">
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                  </div>
+                </div>
+
+                <!-- Graphic Preview Representation -->
+                <div class="h-32 rounded-xl bg-dark-900/80 border border-bronze/20 p-3 flex flex-col justify-between">
+                  <div class="flex items-center justify-between text-[11px] text-beige-300">
+                    <span>Recruitment Success Correlation</span>
+                    <span class="text-emerald-400 font-mono font-semibold">+84.2%</span>
+                  </div>
+                  <!-- Mini simulated chart bars -->
+                  <div class="space-y-2">
+                    <div>
+                      <div class="flex justify-between text-[10px] text-beige-400 mb-1">
+                        <span>Academic % vs Placement</span>
+                        <span class="font-mono">78%</span>
+                      </div>
+                      <div class="w-full h-1.5 bg-dark-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-bronze-light rounded-full w-[78%]"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-[10px] text-beige-400 mb-1">
+                        <span>Internship Impact</span>
+                        <span class="font-mono">92%</span>
+                      </div>
+                      <div class="w-full h-1.5 bg-dark-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-amberAccent rounded-full w-[92%]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content Body -->
+              <div class="p-6 space-y-4">
+                <div class="space-y-1">
+                  <h3 class="font-display font-bold text-xl text-beige-100 group-hover:text-bronze-light transition-colors">
+                    Placement Analytics
+                  </h3>
+                  <p class="text-xs font-mono text-bronze-light">Student Recruitment & Salary Distribution Study</p>
+                </div>
+
+                <p class="text-sm text-beige-300 leading-relaxed">
+                  In-depth evaluation of campus placement datasets analyzing the influence of academic scores, degree disciplines, aptitude tests, and prior work experience on recruitment rates and starting compensation packages.
+                </p>
+
+                <!-- Key Metrics / Insights Pill -->
+                <div class="p-3 rounded-xl bg-dark-900/60 border border-bronze/15 space-y-1">
+                  <div class="text-[11px] font-mono text-beige-400 uppercase">Key Finding:</div>
+                  <div class="text-xs text-beige-200">
+                    Prior internship experience and MBA/degree specialization accounted for a <strong class="text-bronze-light">42% higher</strong> starting salary bracket.
+                  </div>
+                </div>
+
+                <!-- Tech Badges -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">Python</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">Pandas</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">Matplotlib</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">Excel</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="p-6 pt-0 flex items-center gap-3">
+              <button class="project-modal-btn btn-primary flex-1 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5" data-project="placement">
+                <span>View Case Study</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="https://github.com/fida-saleem" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-dark-850 border border-bronze/20 text-beige-200 hover:text-bronze-light transition-all" title="View Code on GitHub">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+
+          <!-- PROJECT 2: Sales Analysis -->
+          <div class="glass-card rounded-2xl overflow-hidden border-shimmer flex flex-col justify-between group">
+            <div>
+              <!-- Visual Mockup Header -->
+              <div class="relative bg-gradient-to-br from-mocha-dark to-dark-950 p-6 border-b border-bronze/15 overflow-hidden">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-[11px] font-mono text-bronze-light bg-dark-950/80 px-2.5 py-1 rounded-md border border-bronze/20">
+                    Retail & Revenue Intelligence
+                  </span>
+                  <div class="w-8 h-8 rounded-lg bg-dark-900/80 flex items-center justify-center text-bronze-light border border-bronze/20">
+                    <i data-lucide="trending-up" class="w-4 h-4"></i>
+                  </div>
+                </div>
+
+                <!-- Graphic Preview Representation -->
+                <div class="h-32 rounded-xl bg-dark-900/80 border border-bronze/20 p-3 flex flex-col justify-between">
+                  <div class="flex items-center justify-between text-[11px] text-beige-300">
+                    <span>Quarterly Revenue Optimization</span>
+                    <span class="text-amberAccent font-mono font-semibold">$348,200</span>
+                  </div>
+                  <!-- Mini simulated chart sparkline bars -->
+                  <div class="grid grid-cols-6 gap-1.5 items-end h-16 pt-2">
+                    <div class="bg-bronze-dark h-[40%] rounded-t"></div>
+                    <div class="bg-bronze-dark h-[55%] rounded-t"></div>
+                    <div class="bg-bronze h-[65%] rounded-t"></div>
+                    <div class="bg-bronze h-[50%] rounded-t"></div>
+                    <div class="bg-bronze-light h-[85%] rounded-t"></div>
+                    <div class="bg-amberAccent h-[100%] rounded-t"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content Body -->
+              <div class="p-6 space-y-4">
+                <div class="space-y-1">
+                  <h3 class="font-display font-bold text-xl text-beige-100 group-hover:text-bronze-light transition-colors">
+                    Sales Analysis
+                  </h3>
+                  <p class="text-xs font-mono text-bronze-light">Retail E-Commerce Revenue & Customer Segmentation</p>
+                </div>
+
+                <p class="text-sm text-beige-300 leading-relaxed">
+                  Comprehensive performance breakdown of multi-region retail transactions. Evaluated seasonal sales cycles, high-margin product categories, regional profitability, and customer retention dynamics.
+                </p>
+
+                <!-- Key Metrics / Insights Pill -->
+                <div class="p-3 rounded-xl bg-dark-900/60 border border-bronze/15 space-y-1">
+                  <div class="text-[11px] font-mono text-beige-400 uppercase">Key Finding:</div>
+                  <div class="text-xs text-beige-200">
+                    Identified that top 20% of SKU inventory contributed <strong class="text-amberAccent">64% of total profit margin</strong>, uncovering strategic discount thresholds.
+                  </div>
+                </div>
+
+                <!-- Tech Badges -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">SQL</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">Power BI</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">Excel</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">Data Modeling</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="p-6 pt-0 flex items-center gap-3">
+              <button class="project-modal-btn btn-primary flex-1 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5" data-project="sales">
+                <span>View Case Study</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="https://github.com/fida-saleem" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-dark-850 border border-bronze/20 text-beige-200 hover:text-bronze-light transition-all" title="View Code on GitHub">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+
+          <!-- PROJECT 3: Exploratory Data Analysis (EDA) -->
+          <div class="glass-card rounded-2xl overflow-hidden border-shimmer flex flex-col justify-between group">
+            <div>
+              <!-- Visual Mockup Header -->
+              <div class="relative bg-gradient-to-br from-mocha-dark to-dark-950 p-6 border-b border-bronze/15 overflow-hidden">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-[11px] font-mono text-bronze-light bg-dark-950/80 px-2.5 py-1 rounded-md border border-bronze/20">
+                    Statistical Data Science
+                  </span>
+                  <div class="w-8 h-8 rounded-lg bg-dark-900/80 flex items-center justify-center text-bronze-light border border-bronze/20">
+                    <i data-lucide="search" class="w-4 h-4"></i>
+                  </div>
+                </div>
+
+                <!-- Graphic Preview Representation -->
+                <div class="h-32 rounded-xl bg-dark-900/80 border border-bronze/20 p-3 flex flex-col justify-between">
+                  <div class="flex items-center justify-between text-[11px] text-beige-300">
+                    <span>Feature Correlation Matrix & Outliers</span>
+                    <span class="text-emerald-400 font-mono font-semibold">100% Cleaned</span>
+                  </div>
+                  <!-- Mini simulated correlation matrix cells -->
+                  <div class="grid grid-cols-4 gap-1 h-16 pt-2">
+                    <div class="bg-amberAccent/90 rounded text-[9px] font-mono flex items-center justify-center text-dark-950 font-bold">1.0</div>
+                    <div class="bg-bronze-light/70 rounded text-[9px] font-mono flex items-center justify-center text-dark-950 font-bold">0.72</div>
+                    <div class="bg-mocha-light/40 rounded text-[9px] font-mono flex items-center justify-center text-beige-200">-0.14</div>
+                    <div class="bg-bronze/60 rounded text-[9px] font-mono flex items-center justify-center text-beige-100">0.58</div>
+                    <div class="bg-bronze-light/70 rounded text-[9px] font-mono flex items-center justify-center text-dark-950 font-bold">0.72</div>
+                    <div class="bg-amberAccent/90 rounded text-[9px] font-mono flex items-center justify-center text-dark-950 font-bold">1.0</div>
+                    <div class="bg-mocha-light/50 rounded text-[9px] font-mono flex items-center justify-center text-beige-200">0.31</div>
+                    <div class="bg-bronze-light/80 rounded text-[9px] font-mono flex items-center justify-center text-dark-950 font-bold">0.84</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content Body -->
+              <div class="p-6 space-y-4">
+                <div class="space-y-1">
+                  <h3 class="font-display font-bold text-xl text-beige-100 group-hover:text-bronze-light transition-colors">
+                    Exploratory Data Analysis (EDA)
+                  </h3>
+                  <p class="text-xs font-mono text-bronze-light">Data Cleaning, Anomaly Profiling & Distribution Modeling</p>
+                </div>
+
+                <p class="text-sm text-beige-300 leading-relaxed">
+                  End-to-end exploratory framework covering missing value strategies, IQR outlier detection, skewness transformations, and bivariate hypothesis testing across multivariate attributes.
+                </p>
+
+                <!-- Key Metrics / Insights Pill -->
+                <div class="p-3 rounded-xl bg-dark-900/60 border border-bronze/15 space-y-1">
+                  <div class="text-[11px] font-mono text-beige-400 uppercase">Key Finding:</div>
+                  <div class="text-xs text-beige-200">
+                    Resolved <strong class="text-bronze-light">18% noise and anomalies</strong> using automated IQR filters and standard deviation thresholding without data integrity loss.
+                  </div>
+                </div>
+
+                <!-- Tech Badges -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">Python</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">Pandas</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">NumPy</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-dark-850 text-beige-200 border border-bronze/20">Matplotlib</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="p-6 pt-0 flex items-center gap-3">
+              <button class="project-modal-btn btn-primary flex-1 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5" data-project="eda">
+                <span>View Case Study</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="https://github.com/fida-saleem" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-dark-850 border border-bronze/20 text-beige-200 hover:text-bronze-light transition-all" title="View Code on GitHub">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         EDUCATION SECTION
+         ========================================================================== -->
+    <section id="education" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dark-850 border border-bronze/25 text-xs font-mono text-bronze-light uppercase tracking-wider">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+            Academic Foundation
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
+            Formal <span class="text-gradient-beige">Education</span>
+          </h2>
+          <p class="text-base text-beige-300">
+            A solid computational and algorithmic background that underpins my data analytics career.
+          </p>
+        </div>
+
+        <!-- Education Card -->
+        <div class="max-w-4xl mx-auto">
+          <div class="glass-card rounded-2xl p-6 sm:p-10 border-shimmer relative">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-bronze/15 pb-8 mb-8">
+              
+              <div class="flex items-start gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-bronze-light to-mocha-dark flex items-center justify-center text-dark-950 font-bold border border-beige-300/30 shadow-lg shadow-bronze/20 shrink-0">
+                  <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+                </div>
+                <div>
+                  <div class="inline-flex items-center gap-2 text-xs font-mono text-bronze-light uppercase tracking-wider mb-1">
+                    <span>Undergraduate Degree</span>
+                    <span class="text-dark-700">•</span>
+                    <span>Completed</span>
+                  </div>
+                  <h3 class="text-2xl font-display font-bold text-white">
+                    Bachelor of Computer Applications (BCA)
+                  </h3>
+                  <p class="text-base font-medium text-beige-300 mt-1 flex items-center gap-2">
+                    <span class="text-bronze-light font-semibold">University of Calicut (Calicut University)</span>
+                    <span class="text-dark-700">•</span>
+                    <span class="text-beige-400">Kerala, India</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Status Badge -->
+              <div class="px-4 py-2 rounded-xl bg-dark-900 border border-bronze/20 text-center shrink-0">
+                <span class="text-xs font-mono text-beige-400 block">Qualification</span>
+                <span class="text-sm font-bold text-beige-100">BCA Graduate</span>
+              </div>
+            </div>
+
+            <!-- Relevant Coursework & Competencies Matrix -->
+            <div class="space-y-6">
+              <h4 class="text-sm font-mono uppercase tracking-wider text-bronze-light flex items-center gap-2">
+                <i data-lucide="book-open" class="w-4 h-4"></i>
+                Core Analytical & Computer Science Coursework
+              </h4>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <div class="p-3.5 rounded-xl bg-dark-900/60 border border-bronze/10">
+                  <div class="text-xs font-semibold text-beige-100 flex items-center gap-2">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-bronze-light"></i>
+                    DBMS & Relational SQL
+                  </div>
+                  <p class="text-[11px] text-beige-400 mt-1">Schema architecture, indexing, normalization & query optimization.</p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-dark-900/60 border border-bronze/10">
+                  <div class="text-xs font-semibold text-beige-100 flex items-center gap-2">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-bronze-light"></i>
+                    Statistical Methods
+                  </div>
+                  <p class="text-[11px] text-beige-400 mt-1">Probability distributions, descriptive metrics & quantitative reasoning.</p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-dark-900/60 border border-bronze/10">
+                  <div class="text-xs font-semibold text-beige-100 flex items-center gap-2">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-bronze-light"></i>
+                    Python & C Programming
+                  </div>
+                  <p class="text-[11px] text-beige-400 mt-1">Algorithmic thinking, data structures, and script automation.</p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-dark-900/60 border border-bronze/10">
+                  <div class="text-xs font-semibold text-beige-100 flex items-center gap-2">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-bronze-light"></i>
+                    Data Structures & Algorithms
+                  </div>
+                  <p class="text-[11px] text-beige-400 mt-1">Computational efficiency, searching, sorting & memory management.</p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-dark-900/60 border border-bronze/10">
+                  <div class="text-xs font-semibold text-beige-100 flex items-center gap-2">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-bronze-light"></i>
+                    Web Technologies
+                  </div>
+                  <p class="text-[11px] text-beige-400 mt-1">HTML5, CSS, modern JavaScript, and web architecture.</p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-dark-900/60 border border-bronze/10">
+                  <div class="text-xs font-semibold text-beige-100 flex items-center gap-2">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-bronze-light"></i>
+                    Software Engineering
+                  </div>
+                  <p class="text-[11px] text-beige-400 mt-1">System lifecycles, requirement modeling, and data integrity testing.</p>
+                </div>
+              </div>
+
+              <!-- Academic Takeaway Note -->
+              <div class="p-4 rounded-xl bg-mocha-dark/30 border border-bronze/20 text-xs text-beige-300 leading-relaxed flex items-start gap-3">
+                <i data-lucide="info" class="w-4 h-4 text-bronze-light shrink-0 mt-0.5"></i>
+                <span>
+                  <strong>Academic Takeaway:</strong> My BCA degree gave me strong foundational knowledge in how databases store, retrieve, and structure information, making it seamless to transition into data analytics, exploratory analysis, and business intelligence.
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section id="contact" class="py-20 bg-dark-900/70 border-t border-bronze/10 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dark-850 border border-bronze/25 text-xs font-mono text-bronze-light uppercase tracking-wider">
+            <i data-lucide="send" class="w-3.5 h-3.5"></i>
+            Get In Touch
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
+            Let's <span class="text-gradient-beige">Connect</span>
+          </h2>
+          <p class="text-base text-beige-300">
+            Have an open data analyst role, internship, or project? Feel free to reach out directly!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Contact Info Cards Column -->
+          <div class="lg:col-span-5 space-y-4">
+            
+            <!-- LinkedIn Profile Card -->
+            <a href="https://linkedin.com/in/fathima-fida-13185b433" target="_blank" rel="noopener noreferrer" 
+               class="glass-card rounded-2xl p-5 border-bronze/20 hover:border-bronze-light/50 flex items-center justify-between group transition-all">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-dark-900 border border-bronze/30 flex items-center justify-center text-bronze-light group-hover:scale-105 transition-transform">
+                  <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-mono text-beige-400 uppercase">Professional Network</span>
+                  <h4 class="font-display font-semibold text-beige-100 group-hover:text-bronze-light transition-colors">LinkedIn Profile</h4>
+                  <p class="text-xs text-beige-400 truncate max-w-[200px] sm:max-w-xs font-mono">linkedin.com/in/fathima-fida-13185b433</p>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-5 h-5 text-bronze-light group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+            </a>
+
+            <!-- GitHub Profile Card -->
+            <a href="https://github.com/fida-saleem" target="_blank" rel="noopener noreferrer" 
+               class="glass-card rounded-2xl p-5 border-bronze/20 hover:border-bronze-light/50 flex items-center justify-between group transition-all">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-dark-900 border border-bronze/30 flex items-center justify-center text-bronze-light group-hover:scale-105 transition-transform">
+                  <i data-lucide="github" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-mono text-beige-400 uppercase">Code Repositories</span>
+                  <h4 class="font-display font-semibold text-beige-100 group-hover:text-bronze-light transition-colors">GitHub Profile</h4>
+                  <p class="text-xs text-beige-400 font-mono">github.com/fida-saleem</p>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-5 h-5 text-bronze-light group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+            </a>
+
+            <!-- Email Card with Copy Feature -->
+            <div class="glass-card rounded-2xl p-5 border-bronze/20 flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-dark-900 border border-bronze/30 flex items-center justify-center text-bronze-light">
+                  <i data-lucide="mail" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-mono text-beige-400 uppercase">Direct Email</span>
+                  <h4 class="font-display font-semibold text-beige-100">fathimafida.analytics@gmail.com</h4>
+                  <p class="text-xs text-beige-400">Available for recruitment outreach</p>
+                </div>
+              </div>
+              <button id="copy-email-btn" type="button" class="p-2.5 rounded-lg bg-dark-850 hover:bg-dark-800 text-beige-300 hover:text-bronze-light border border-bronze/20 transition-all" title="Copy Email">
+                <i data-lucide="copy" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+            <!-- Location Card -->
+            <div class="glass-card rounded-2xl p-5 border-bronze/20 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-dark-900 border border-bronze/30 flex items-center justify-center text-bronze-light">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-beige-400 uppercase">Location</span>
+                <h4 class="font-display font-semibold text-beige-100">Calicut, Kerala, India</h4>
+                <p class="text-xs text-beige-400">Open to remote & on-site positions</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="lg:col-span-7">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 border-shimmer">
+              <h3 class="text-xl font-display font-semibold text-beige-100 mb-2">Send a Message</h3>
+              <p class="text-xs text-beige-400 mb-6">Fill out the form below and I'll respond as soon as possible.</p>
+
+              <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="name" class="block text-xs font-mono text-beige-300 mb-1.5 uppercase tracking-wider">Your Name <span class="text-bronze-light">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="e.g. Rahul Sharma" 
+                           class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-bronze/20 text-beige-100 placeholder-beige-500/50 text-sm focus:outline-none focus:border-bronze-light focus:ring-1 focus:ring-bronze-light transition-all">
+                  </div>
+                  <div>
+                    <label for="email" class="block text-xs font-mono text-beige-300 mb-1.5 uppercase tracking-wider">Your Email <span class="text-bronze-light">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="name@company.com" 
+                           class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-bronze/20 text-beige-100 placeholder-beige-500/50 text-sm focus:outline-none focus:border-bronze-light focus:ring-1 focus:ring-bronze-light transition-all">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="subject" class="block text-xs font-mono text-beige-300 mb-1.5 uppercase tracking-wider">Subject <span class="text-bronze-light">*</span></label>
+                  <input type="text" id="subject" name="subject" required placeholder="Data Analyst Opportunity / Internship Inquiry" 
+                         class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-bronze/20 text-beige-100 placeholder-beige-500/50 text-sm focus:outline-none focus:border-bronze-light focus:ring-1 focus:ring-bronze-light transition-all">
+                </div>
+
+                <div>
+                  <label for="message" class="block text-xs font-mono text-beige-300 mb-1.5 uppercase tracking-wider">Message <span class="text-bronze-light">*</span></label>
+                  <textarea id="message" name="message" rows="4" required placeholder="Share details about the role, project requirements, or your query..." 
+                            class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-bronze/20 text-beige-100 placeholder-beige-500/50 text-sm focus:outline-none focus:border-bronze-light focus:ring-1 focus:ring-bronze-light transition-all resize-none"></textarea>
+                </div>
+
+                <div class="pt-2">
+                  <button type="submit" id="submit-btn" class="btn-primary w-full py-3.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2">
+                    <span>Send Message</span>
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="bg-dark-950 border-t border-bronze/15 py-10 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-bronze-light to-mocha-dark flex items-center justify-center font-display font-bold text-dark-950 text-lg shadow-md border border-beige-300/30">
+              F
+            </div>
+            <div>
+              <p class="font-display font-bold text-sm text-beige-100">Fathima Fida</p>
+              <p class="text-xs text-beige-400 font-mono">Data Analyst • BCA Graduate (Calicut University)</p>
+            </div>
+          </div>
+
+          <!-- Quick Navigation Links -->
+          <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-beige-300">
+            <a href="#home" class="hover:text-bronze-light transition-colors">Home</a>
+            <span class="text-dark-700">•</span>
+            <a href="#about" class="hover:text-bronze-light transition-colors">About</a>
+            <span class="text-dark-700">•</span>
+            <a href="#skills" class="hover:text-bronze-light transition-colors">Skills</a>
+            <span class="text-dark-700">•</span>
+            <a href="#projects" class="hover:text-bronze-light transition-colors">Projects</a>
+            <span class="text-dark-700">•</span>
+            <a href="#education" class="hover:text-bronze-light transition-colors">Education</a>
+            <span class="text-dark-700">•</span>
+            <a href="#contact" class="hover:text-bronze-light transition-colors">Contact</a>
+          </div>
+
+          <!-- Back to Top Button -->
+          <button id="back-to-top" class="p-2.5 rounded-xl bg-dark-900 hover:bg-dark-850 border border-bronze/20 text-beige-200 hover:text-bronze-light transition-all flex items-center gap-1.5 text-xs" aria-label="Back to Top">
+            <span>Top</span>
+            <i data-lucide="arrow-up" class="w-4 h-4"></i>
+          </button>
+
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-bronze/10 text-center text-xs text-beige-400">
+          <p>© <span id="current-year">2026</span> Fathima Fida. Crafted with dedication to precision, clean data, and actionable analytics.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- ==========================================================================
+       CASE STUDY DETAIL MODAL (Interactive Project Deep-Dives)
+       ========================================================================== -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="glass-card max-w-3xl w-full rounded-2xl border-shimmer overflow-hidden shadow-2xl relative my-auto animate-float-none">
+      
+      <!-- Modal Header -->
+      <div class="bg-dark-900/90 px-6 py-5 border-b border-bronze/20 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div id="modal-icon" class="w-10 h-10 rounded-xl bg-mocha-dark/90 border border-bronze/30 flex items-center justify-center text-bronze-light">
+            <i data-lucide="file-text" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 id="modal-title" class="font-display font-bold text-lg text-white">Project Title</h3>
+            <p id="modal-subtitle" class="text-xs text-bronze-light font-mono">Category • Tools</p>
+          </div>
+        </div>
+        <button id="modal-close-btn" class="p-2 rounded-lg bg-dark-850 hover:bg-dark-800 text-beige-300 hover:text-white border border-bronze/20 transition-all">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body Content -->
+      <div class="p-6 sm:p-8 space-y-6 max-h-[75vh] overflow-y-auto" id="modal-body">
+        <!-- Content will be injected dynamically via JavaScript -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="bg-dark-900/90 px-6 py-4 border-t border-bronze/20 flex items-center justify-between">
+        <div class="flex items-center gap-2" id="modal-tech-tags">
+          <!-- Tags injected dynamically -->
+        </div>
+        <div class="flex items-center gap-3">
+          <a id="modal-github-link" href="https://github.com/fida-saleem" target="_blank" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2">
+            <span>View on GitHub</span>
+            <i data-lucide="github" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       RESUME SUMMARY MODAL
+       ========================================================================== -->
+  <div id="resume-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="glass-card max-w-2xl w-full rounded-2xl border-shimmer overflow-hidden shadow-2xl relative my-auto">
+      
+      <div class="bg-dark-900/90 px-6 py-5 border-b border-bronze/20 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-mocha-dark/90 border border-bronze/30 flex items-center justify-center text-bronze-light">
+            <i data-lucide="file-text" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-lg text-white">Fathima Fida - Resume Overview</h3>
+            <p class="text-xs text-bronze-light font-mono">BCA Graduate • Data Analyst</p>
+          </div>
+        </div>
+        <button id="resume-close-btn" class="p-2 rounded-lg bg-dark-850 hover:bg-dark-800 text-beige-300 hover:text-white border border-bronze/20 transition-all">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-6 sm:p-8 space-y-6 max-h-[70vh] overflow-y-auto text-sm text-beige-300">
+        <!-- Profile Summary -->
+        <div class="space-y-2 border-b border-bronze/15 pb-4">
+          <h4 class="font-display font-semibold text-beige-100 text-base">Professional Profile</h4>
+          <p class="text-xs leading-relaxed">
+            Analytical BCA graduate from Calicut University passionate about transforming raw data into actionable business intelligence. Solid competencies in Python, SQL, Excel, and Power BI with strong problem-solving and communication skills.
+          </p>
+        </div>
+
+        <!-- Academic Credentials -->
+        <div class="space-y-2 border-b border-bronze/15 pb-4">
+          <h4 class="font-display font-semibold text-beige-100 text-base">Education</h4>
+          <div class="flex justify-between items-baseline text-xs">
+            <span class="font-semibold text-white">Bachelor of Computer Applications (BCA)</span>
+            <span class="font-mono text-bronze-light">Calicut University</span>
+          </div>
+          <p class="text-[11px] text-beige-400">Coursework: Database Management Systems (DBMS & SQL), Statistics, Python, Data Structures.</p>
+        </div>
+
+        <!-- Technical Competencies -->
+        <div class="space-y-2 border-b border-bronze/15 pb-4">
+          <h4 class="font-display font-semibold text-beige-100 text-base">Key Skills</h4>
+          <p class="text-xs"><strong class="text-beige-100">Languages & Tools:</strong> Python, SQL, Advanced Excel, Power BI</p>
+          <p class="text-xs"><strong class="text-beige-100">Libraries:</strong> Pandas, NumPy, Matplotlib</p>
+          <p class="text-xs"><strong class="text-beige-100">Analytics:</strong> Exploratory Data Analysis (EDA), Data Cleaning, KPI Dashboards, Feature Correlation</p>
+        </div>
+
+        <!-- Verified Projects -->
+        <div class="space-y-3">
+          <h4 class="font-display font-semibold text-beige-100 text-base">Key Projects</h4>
+          <div class="space-y-1 text-xs">
+            <span class="font-semibold text-beige-100">1. Placement Analytics:</span> Academic performance & internship correlation with recruitment outcomes.
+          </div>
+          <div class="space-y-1 text-xs">
+            <span class="font-semibold text-beige-100">2. Sales Analysis:</span> Retail transaction trends, category profitability, and regional performance.
+          </div>
+          <div class="space-y-1 text-xs">
+            <span class="font-semibold text-beige-100">3. Exploratory Data Analysis (EDA):</span> Systematic anomaly detection, IQR outlier mitigation, and statistical profiling.
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-dark-900/90 px-6 py-4 border-t border-bronze/20 flex items-center justify-between">
+        <span class="text-xs text-beige-400 font-mono">Calicut, Kerala, India</span>
+        <button onclick="window.print()" class="btn-primary px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          <span>Print / Save as PDF</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden transition-all duration-300 transform translate-y-4">
+    <div class="glass-card px-5 py-3.5 rounded-xl border border-bronze-light/40 shadow-2xl flex items-center gap-3">
+      <div id="toast-icon" class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+        <i data-lucide="check" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <h4 id="toast-title" class="text-xs font-semibold text-white">Success</h4>
+        <p id="toast-message" class="text-xs text-beige-300">Your message has been sent!</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Custom Application Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
